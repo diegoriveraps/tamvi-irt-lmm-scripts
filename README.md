@@ -1,9 +1,9 @@
 # tamvi-irt-lmm-scripts
 R scripts used for the psychometric and normative analyses of the TAMV-I Learning and Memory Test. This repository contains the reproducible code used in the manuscript “Establishing Normative Data for the TAMV-I Learning and Memory Test: An Approach Using Item Response Theory and Linear Mixed Models"
 
-# Script overview
+## Script overview
 
-## `01_irt_models.R` – IRT modeling and theta extraction
+### `01_irt_models.R` – IRT modeling and theta extraction
 - Fits **Rasch (1PL)** and **2PL** models for each trial using `ltm::rasch()` and `ltm::ltm()`.
 - Compares models via log-likelihood ratio tests, AIC, and BIC.
 - Extracts individual **EAP theta scores** (`factor.scores(method = "EAP")`).
@@ -11,7 +11,7 @@ R scripts used for the psychometric and normative analyses of the TAMV-I Learnin
 
 ---
 
-## `02_variable_selection.R` – Variable selection and mixed modeling
+### `02_variable_selection.R` – Variable selection and mixed modeling
 - Performs **best-subset variable selection** using `leaps::regsubsets()`  
   across polynomial age, log-transformed MPE, and interaction terms.
 - Selects the optimal model based on **BIC** (default).
@@ -22,7 +22,7 @@ R scripts used for the psychometric and normative analyses of the TAMV-I Learnin
 
 ---
 
-## `03_plots.R` – Figures for IRT and modeling results
+### `03_plots.R` – Figures for IRT and modeling results
 - Loads the saved models (`irt_results` and `lme1`).
 - (A) **IRT plots:** Item Characteristic Curves (ICCs) for selected 2PL models.  
   - Exports `outputs/Figure_2.png`
@@ -32,7 +32,7 @@ R scripts used for the psychometric and normative analyses of the TAMV-I Learnin
 
 ---
 
-## Reproducible workflow
+### Reproducible workflow
 
 Run the scripts sequentially:
 
