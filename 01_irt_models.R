@@ -20,6 +20,16 @@ suppressPackageStartupMessages({
 load("00_tamvi.RData")
 tamvi <- na.exclude(tamvi)
 
+set.seed(1234)
+
+tamvi <- tamvi %>%
+  mutate(
+    ID = replicate(
+      n(), 
+      paste0(sample(c(0:9, LETTERS, letters), 8, replace = TRUE), collapse = "")
+    )
+  )
+
 # Expect: an object named `tamvi` already in memory with item columns.
 # If not, stop with a clear message.
 if (!exists("tamvi")) {
@@ -228,3 +238,4 @@ saveRDS(df2, file = "data/df2.rds")
 
 # --- Reproducibility -----------------------------------------------------
 sessionInfo()
+
