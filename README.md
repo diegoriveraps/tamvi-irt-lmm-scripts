@@ -5,7 +5,7 @@ This repository contains the reproducible code used in the manuscript: _Normativ
 ## Table of contents
 
 -   [R code](#R-code)
--   [Reproducible workflow](#Reproducible workflow)
+-   [Reproducible workflow](#Reproducible)
 -   [References](#References)
 
 # R-code
@@ -24,7 +24,7 @@ R scripts performs **best-subset variable selection** using `leaps::regsubsets()
 
 R script containing functions that execute procedures used in the main scripts.
 
-# Reproducible workflow
+# Reproducible
 
 Run the scripts sequentially:
 
