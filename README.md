@@ -1,42 +1,35 @@
 # tamvi-irt-lmm-scripts
-R scripts used for the psychometric and normative analyses of the TAMV-I Learning and Memory Test. This repository contains the reproducible code used in the manuscript “Establishing Normative Data for the TAMV-I Learning and Memory Test: An Approach Using Item Response Theory and Linear Mixed Models"
 
-## Script overview
+This repository contains the reproducible code used in the manuscript: _Normative Data for Learning and Memory Test (TAMV-I) in Latin American and Spanish Children: An Item Response Theory and Linear Mixed Models Approach_
 
-### `01_irt_models.R` – IRT modeling and theta extraction
-- Fits **Rasch (1PL)** and **2PL** models for each trial using `ltm::rasch()` and `ltm::ltm()`.
-- Compares models via log-likelihood ratio tests, AIC, and BIC.
-- Extracts individual **EAP theta scores** (`factor.scores(method = "EAP")`).
-- Appends theta estimates (`Trial_1` to `Trial_6`) to the dataset `tamvi`.
+## Table of contents
 
----
+-   [R code](#R-code)
+-   [Reproducible workflow](#Reproducible workflow)
+-   [References](#References)
 
-### `02_variable_selection.R` – Variable selection and mixed modeling
-- Performs **best-subset variable selection** using `leaps::regsubsets()`  
-  across polynomial age, log-transformed MPE, and interaction terms.
-- Selects the optimal model based on **BIC** (default).
-- Refits the selected structure in a **Linear Mixed-Effects Model** (`lmer()`)  
-  with random intercepts for `ID`.
-- Generates predictions for new cases and computes **normative percentiles**  
-  comparing observed IRT scores (θ) to model-based expectations.
+# R-code
 
----
+This folder contains the following files:
 
-### `03_plots.R` – Figures for IRT and modeling results
-- Loads the saved models (`irt_results` and `lme1`).
-- (A) **IRT plots:** Item Characteristic Curves (ICCs) for selected 2PL models.  
-  - Exports `outputs/Figure_2.png`
-- (B) **Modeling plots:** Marginal predictions using `ggeffects::ggpredict()`  
-  across key covariates (MPE, age, Trial, sex, country).  
-  - Exports `outputs/Figure_3.jpeg` (high-resolution, 600 dpi)
+-   [**01_irt_models.R**](https://github.com/diegoriveraps/tamvi-irt-lmm-scripts/Rcode/01_irt_models.R)
 
----
+R script Fits **Rasch (1PL)** and **2PL** models for each trial using `ltm::rasch()` and `ltm::ltm()`, compares models via log-likelihood ratio tests, AIC, and BIC, extracts individual **EAP theta scores** (`factor.scores(method = "EAP")`), and appends theta estimates (`Trial_1` to `Trial_6`) to the dataset `tamvi`.
 
-### Reproducible workflow
+-   [**02_variable_selection_and_plots.R**](https://github.com/diegoriveraps/tamvi-irt-lmm-scripts/Rcode/02_variable_selection_and_plots.R)
+
+R scripts performs **best-subset variable selection** using `leaps::regsubsets()` across polynomial age, log-transformed MPE, and interaction terms; selects the optimal model based on **BIC** (default); refits the selected structure in a **Linear Mixed-Effects Model** (`lmer()`) with random intercepts for `ID`; generates predictions for new cases and computes **normative percentiles** by comparing observed IRT scores ($\theta$) to model-based expectations; and generate Figures 2 and 3 showing IRT and modeling results at 300 dpi.
+
+-   [**auxiliary_functions.R**](https://github.com/diegoriveraps/tamvi-irt-lmm-scripts/Rcode/auxiliary_functions.R)
+
+R script containing functions that execute procedures used in the main scripts.
+
+# Reproducible workflow
 
 Run the scripts sequentially:
 
-```r
+```
 source("scripts/01_irt_models.R")
-source("scripts/02_variable_selection.R")
-source("scripts/03_plots.R")
+source("scripts/02_variable_selection_and_plots.R")
+```
+# References
