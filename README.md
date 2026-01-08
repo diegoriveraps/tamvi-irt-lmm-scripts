@@ -33,3 +33,5 @@ source("scripts/01_irt_models.R")
 source("scripts/02_variable_selection_and_plots.R")
 ```
 # References
+
+[Rivera, D., Arango-Lasprilla, J. C., Orozco-Acosta, E., Vergara-Moragues, E., Albaladejo-Blázquez, N., & Irias Escher, M. J. (2026). Learning and Memory Test (TAMV-I) in Latin American and Spanish Children [Data set]. Zenodo. https://doi.org/10.5281/zenodo.18176818](https://doi.org/10.5281/zenodo.18176818)
