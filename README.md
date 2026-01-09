@@ -1,6 +1,4 @@
----
-title: "tamvi-irt-lmm-scripts"
----
+# tamvi-irt-lmm-scripts
 
 This repository contains the reproducible code used in the manuscript: _Normative Data for Learning and Memory Test (TAMV-I) in Latin American and Spanish Children: An Item Response Theory and Linear Mixed Models Approach_. Data are available in [Rivera et al. (2026)](https://doi.org/10.5281/zenodo.18176818).
 
