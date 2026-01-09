@@ -1,11 +1,13 @@
-# tamvi-irt-lmm-scripts
+---
+title: "tamvi-irt-lmm-scripts"
+---
 
-This repository contains the reproducible code used in the manuscript: _Normative Data for Learning and Memory Test (TAMV-I) in Latin American and Spanish Children: An Item Response Theory and Linear Mixed Models Approach_
+This repository contains the reproducible code used in the manuscript: _Normative Data for Learning and Memory Test (TAMV-I) in Latin American and Spanish Children: An Item Response Theory and Linear Mixed Models Approach_. Data are available in [Rivera et al. (2026)](https://doi.org/10.5281/zenodo.18176818).
 
-## Table of contents
+# Table of contents
 
 -   [R code](#R-code)
--   [Reproducible workflow](#Reproducible)
+-   [Reproducible workflow](#Reproducible-workflow)
 -   [References](#References)
 
 # R-code
@@ -18,13 +20,13 @@ R script Fits **Rasch (1PL)** and **2PL** models for each trial using `ltm::rasc
 
 -   [**02_variable_selection_and_plots.R**](https://github.com/diegoriveraps/tamvi-irt-lmm-scripts/blob/main/Rcode/02_variable_selection_and_plots.R)
 
-R scripts performs **best-subset variable selection** using `leaps::regsubsets()` across polynomial age, log-transformed MPE, and interaction terms; selects the optimal model based on **BIC** (default); refits the selected structure in a **Linear Mixed-Effects Model** (`lmer()`) with random intercepts for `ID`; generates predictions for new cases and computes **normative percentiles** by comparing observed IRT scores ($\theta$) to model-based expectations; and generate Figures 2 and 3 showing IRT and modeling results at 300 dpi.
+R script performs **best-subset variable selection** using `leaps::regsubsets()` across polynomial age, log-transformed MPE, and interaction terms; selects the optimal model based on **BIC** (default); refits the selected structure in a **Linear Mixed-Effects Model** (`lmer()`) with random intercepts for `ID`; generates predictions for new cases and computes **normative percentiles** by comparing observed IRT scores ($\theta$) to model-based expectations; and generate Figures 2 and 3 showing IRT and modeling results at 300 dpi.
 
 -   [**auxiliary_functions.R**](https://github.com/diegoriveraps/tamvi-irt-lmm-scripts/blob/main/Rcode/auxiliary_functions.R)
 
 R script containing functions that execute procedures used in the main scripts.
 
-# Reproducible
+# Reproducible-workflow
 
 Run the scripts sequentially:
 
