@@ -34,4 +34,6 @@ source("scripts/02_variable_selection_and_plots.R")
 ```
 # References
 
+[Fuentes Mendoza, E. M., Olabarrieta-Landa, L., Rodríguez-Lorenzana, A., Mascialino, G., Vergara-Moragues, E., et al. (2026) Normative Data for Learning and Memory Test (TAMV-I) in Latin American and Spanish Children: An item response theory and linear mixed models approach. PLOS ONE 21(2): e0341237. https://doi.org/10.1371/journal.pone.0341237](https://doi.org/10.1371/journal.pone.0341237)
+
 [Rivera, D., Arango-Lasprilla, J. C., Orozco-Acosta, E., Vergara-Moragues, E., Albaladejo-Blázquez, N., & Irias Escher, M. J. (2026). Learning and Memory Test (TAMV-I) in Latin American and Spanish Children [Data set]. Zenodo. https://doi.org/10.5281/zenodo.18176818](https://doi.org/10.5281/zenodo.18176818)
