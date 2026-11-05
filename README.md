@@ -28,9 +28,18 @@ R script containing functions that execute procedures used in the main scripts.
 
 Run the scripts sequentially:
 
+## 1. Clone the repository from the terminal
 ```
-source("scripts/01_irt_models.R")
-source("scripts/02_variable_selection_and_plots.R")
+git clone https://github.com/diegoriveraps/tamvi-irt-lmm-scripts.git
+```
+### 2. Navigate to the project directory
+```
+cd tamvi-irt-lmm-scripts
+```
+### 3. Run the analysis in `R`
+```
+source("Rcode/01_irt_models.R")
+source("Rcode/02_variable_selection_and_plots.R")
 ```
 # References
 

@@ -4,7 +4,7 @@
 library(ltm)
 library(dplyr)
 library(purrr)
-# library(readr)
+library(readr)
 library(tibble)
 
 #############
@@ -95,7 +95,7 @@ names(tamvi)[names(tamvi) %in% names(blocks)]
 ##############################
 # Save df2 subset from tamvi #
 ##############################
-df2 <- tamvi[, c(1:5, 86:91)]
+df2 <- tamvi[, c(1:4, 85:91)]
 saveRDS(df2, file = "data/df2.rds")
 
 ###################
